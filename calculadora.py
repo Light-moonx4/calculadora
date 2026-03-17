@@ -133,13 +133,19 @@ while opcion!=10:
         if esfera==1:
             #puede numeros digitar decimales y enteros
             radio_esfera=float(input("digite el valor del radio de la esfera:"))
-            Area_superficie=4*pi*radio_esfera**2
-            print("el Area o Area superficie de la esfera es:",Area_superficie)
+            if radio_esfera>=0:
+                Area_superficie=4*pi*radio_esfera**2
+                print("el Area o Area superficie de la esfera es:",Area_superficie)
+            else:
+                print("error el radio de la esfera no puede ser un numero negativo")
         elif esfera==2:
             #puede numeros digitar decimales y enteros
             radio_esfera=float(input("digite el valor del radio de la esfera:"))
-            volumen=(4/3)*pi*radio_esfera**3
-            print("el Volumen de la esfera es:",volumen)
+            if radio_esfera>=0:
+                volumen=(4/3)*pi*radio_esfera**3
+                print("el Volumen de la esfera es:",volumen)
+            else:
+                print("error el radio de la esfera no puede ser un numero negativo")
         else:
             print("numero invalido o no digito numero")
     #cilindro
